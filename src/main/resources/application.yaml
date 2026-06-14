@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital_db
+    username: hospital_user
+    password: password123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  security:
+    user:
+      name: admin
+
+jwt:
+  secret: hospital_secret_key_minimum_32_characters_long_enough
+
+server:
+  port: 8080
